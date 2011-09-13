@@ -10,7 +10,7 @@ module Appetizer
           select { |f| File.file? f }.
           map    { |f| f[root.length..-1] }
 
-        @static = ::Rack::Static.new notfound, root: root, urls: urls
+        @static = ::Rack::Static.new notfound, :root => root, :urls => urls
       end
 
       def call env

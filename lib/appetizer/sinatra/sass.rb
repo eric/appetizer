@@ -5,7 +5,7 @@ module Appetizer
   module Sinatra
     module Sass
       def self.registered app
-        app.set :scss, cache_location: "tmp/sass-cache", style: :compact
+        app.set :scss, :cache_location => "tmp/sass-cache", :style => :compact
 
         app.get "/css/screen.css" do
           scss :"css/screen"

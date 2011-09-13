@@ -9,14 +9,14 @@ def App.arconfig!
   url = URI.parse ENV["DATABASE_URL"]
 
   cfg = {
-    adapter:      url.scheme,
-    database:     url.path[1..-1],
-    encoding:     "utf8",
-    host:         url.host,
-    min_messages: "WARNING",
-    password:     url.password,
-    port:         url.port,
-    username:     url.user
+    :adapter =>      url.scheme,
+    :database =>     url.path[1..-1],
+    :encoding =>     "utf8",
+    :host =>         url.host,
+    :min_messages => "WARNING",
+    :password =>     url.password,
+    :port =>         url.port,
+    :username =>     url.user
   }
 
   case url.scheme
